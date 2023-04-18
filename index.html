@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="./style.css">
+  <title>Frontend Mentor | Interactive card details form</title>
+</head>
+<body class="container">
+  <!-- credit cards -->
+  <aside>
+    <div class="cards-container">
+      <div class="card card-front">
+        <img src="./images/bg-card-front.png" alt="card-front">
+        <div class="inside-card-data">
+          <div class="circles">
+            <img src="./images/card-logo.svg" alt="logo">
+          </div>
+          <div class="credit-card-info">
+            <div class="credit-card-number card-information" data-id="number">0000 0000 0000 0000</div>
+            <div class="credit-card-data">
+              <div class="credit-card-name card-information" data-id="name">Jane Appleseed</div>
+              <div class="credit-card-expire"><span class="card-month card-information" data-id="month">00</span>/<span class="card-year card-information" data-id="year">00</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card card-back">
+        <img src="./images/bg-card-back.png" alt="card-back">
+        <div class="inside-card-data">
+          <div class="attribution">
+            Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+            Coded by <a href="https://github.com/MarjanZivkovic" target="_blank">Marjan</a>.
+          </div>
+          <div class="credit-card-cvc card-information" data-id="cvc">000</div>
+        </div>
+      </div>
+    </div>
+  </aside>
+  <!-- form -->
+  <main>
+    <div class="form-container form-page">
+      <form>
+        <div class="form-group">
+          <label for="name">Cardholder Name</label>
+          <input id="name" data-id="name" type="text" placeholder="e.g. Jane Appleseed" maxlength="35">
+          <div class="error">&nbsp;</div>
+        </div>
+        <div class="form-group">
+          <label for="number">Card Number</label>
+          <input id="number" class="input-number" data-id="number" type="text" placeholder="e.g. 1234 5678 9123 0000" maxlength="19">
+          <div class="error">&nbsp;</div>
+        </div>
+        <div class="form-group form-group-flex">
+          <div class="form-date">
+            <label for="month">Exp. Date (MM/YY)</label>
+            <div class="form-date-flex">
+              <input id="month" class="input-number" data-id="month" type="text" placeholder="MM" maxlength="2">
+              <input id="year" class="input-number" data-id="year" type="text" placeholder="YY" maxlength="2">
+            </div>
+            <div class="error">&nbsp;</div>
+          </div>
+          <div class="form-date">
+            <label for="cvc">CVC</label>
+            <input id="cvc" class="input-number" data-id="cvc" type="text" placeholder="e.g. 123" maxlength="3">
+            <div class="error">&nbsp;</div>
+          </div>
+        </div>
+        <button class="submit" id="submit" type="submit">Confirm</button>
+      </form>
+    </div>
+    <!-- Completed state start -->
+    <div class="form-container thank-you-page" hidden>
+      <img src="./images/icon-complete.svg" alt="check-mark">
+      <h1>Thank you!</h1>
+      <p>We've added your card details</p>
+      <button id="continue" class="submit">Continue</button>
+    </div>
+  </main>
+ 
+  <script src="./script.js"></script>
+</body>
+</html>
