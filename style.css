@@ -91,7 +91,7 @@ aside{
     letter-spacing: 2px;
 }
 .card-back .inside-card-data{
-    justify-content: end;
+    justify-content: flex-end;
     font-size: 0.65rem;
     padding-right: 12.5%;
     margin-top: -0.25rem;
